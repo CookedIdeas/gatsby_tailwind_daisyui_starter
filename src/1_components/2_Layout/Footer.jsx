@@ -4,8 +4,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="btm-nav bg-base-200 h-32 ">
-      <div className="cursor-auto">
+    <footer className="grid place-items-center bg-base-200 h-32 ">
+      <div className="flex flex-col items-center gap-2">
         <p className="text-center">
           Made with{' '}
           <Link
@@ -87,7 +87,7 @@ const Footer = () => {
           &#169; {new Date().getFullYear()} No copyright here actually ;)
         </span>
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;

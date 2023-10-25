@@ -5,10 +5,10 @@ import Layout from '../1_components/2_Layout/Layout';
 const NotFoundPage = () => {
   return (
     <Layout>
-      <div className="min-h-[80vh] place-items-center grid items-center">
+      <div className="min-h-[60vh] grid place-items-center">
         <div className="text-center flex flex-col gap-4">
-          <span className="text-9xl">404</span>
-          <h1 className="text-2xl font-semibold">
+          <span className="text-8xl sm:text-9xl">404</span>
+          <h1 className="sm:text-2xl font-semibold">
             Oups, there's nothing here...
           </h1>
           <div className="pt-4">

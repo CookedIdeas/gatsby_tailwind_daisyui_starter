@@ -6,12 +6,17 @@ export const navlinks = [
   },
   {
     id: 2,
-    text: 'page 1',
-    url: '/page1',
+    text: 'our services',
+    url: '/services',
   },
   {
     id: 3,
-    text: 'page 2',
-    url: '/page2',
+    text: 'our products',
+    url: '/products',
+  },
+  {
+    id: 4,
+    text: 'about us',
+    url: '/about',
   },
 ];

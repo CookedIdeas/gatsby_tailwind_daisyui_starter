@@ -7,7 +7,7 @@ import { navlinks } from './assets_navlinks';
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-200">
+    <header className="navbar bg-base-200">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost md:hidden">
@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <a className="btn">Button</a>
       </div>
-    </div>
+    </header>
   );
 };
 export default Navbar;
