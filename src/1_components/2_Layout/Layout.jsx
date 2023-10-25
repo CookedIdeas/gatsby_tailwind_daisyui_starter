@@ -1,11 +1,13 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main>{children}</main>;
+      <main className="min-h-[80vh]">{children}</main>
+      <Footer />
     </>
   );
 };

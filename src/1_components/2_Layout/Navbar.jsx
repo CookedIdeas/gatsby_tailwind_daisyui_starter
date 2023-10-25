@@ -3,6 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { IconContext } from 'react-icons';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { navlinks } from './assets_navlinks';
 
 const Navbar = () => {
   return (
@@ -16,23 +17,16 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
+            {navlinks.map((link) => {
+              const { id, text, url } = link;
+              return (
+                <li key={id}>
+                  <Link to={url} className="capitalize">
+                    {text}
+                  </Link>
                 </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -48,25 +42,16 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li tabIndex={0}>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+          {navlinks.map((link) => {
+            const { id, text, url } = link;
+            return (
+              <li key={id}>
+                <Link to={url} className="capitalize">
+                  {text}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className="navbar-end">
