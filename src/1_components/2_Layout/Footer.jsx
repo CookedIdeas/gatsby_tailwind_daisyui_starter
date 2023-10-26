@@ -6,10 +6,11 @@ const Footer = () => {
   return (
     <footer className="grid place-items-center bg-base-200 h-32 ">
       <div className="flex flex-col items-center gap-2">
-        <p className="text-center">
+        <div className="text-center">
           Made with{' '}
-          <Link
-            to="https://www.gatsbyjs.com/"
+          <a
+            href="https://www.gatsbyjs.com/"
+            rel="noreferrer"
             target="_blank"
             className="relative effect-underline"
           >
@@ -30,11 +31,12 @@ const Footer = () => {
               </g>
             </svg>
             Gatsby
-          </Link>
+          </a>
           ,{' '}
           {
-            <Link
-              to="https://tailwindcss.com/"
+            <a
+              href="https://tailwindcss.com/"
+              rel="noreferrer"
               target="_blank"
               className="relative effect-underline"
             >
@@ -43,27 +45,23 @@ const Footer = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 className="fill-[#07B6D5] inline pr-1 pb-1 w-5 h-5"
               >
-                <path
-                  class="st0"
-                  d="M489.5 226.499C328 231.632 280 346.999 269 409.499C283.333 386.332 328.5 335.5 395 335.5C472.5 335.5 531.5 422 567.5 449C611.237 481.803 699.123 525.115 814.5 490C906.5 462 949.167 364.332 958.5 317.999C914 378.499 846.5 414.838 763 371.999C705.5 342.499 662.5 221 489.5 226.499Z"
-                />
-                <path
-                  class="st0"
-                  d="M261 500.999C99.5 506.132 51.5 621.499 40.5 683.999C54.8333 660.832 100 610 166.5 610C244 610 303 696.5 339 723.5C382.737 756.303 470.623 799.615 586 764.5C678 736.5 720.667 638.832 730 592.499C685.5 652.999 618 689.338 534.5 646.499C477 616.999 434 495.5 261 500.999Z"
-                />
+                <path d="M489.5 226.499C328 231.632 280 346.999 269 409.499C283.333 386.332 328.5 335.5 395 335.5C472.5 335.5 531.5 422 567.5 449C611.237 481.803 699.123 525.115 814.5 490C906.5 462 949.167 364.332 958.5 317.999C914 378.499 846.5 414.838 763 371.999C705.5 342.499 662.5 221 489.5 226.499Z" />
+                <path d="M261 500.999C99.5 506.132 51.5 621.499 40.5 683.999C54.8333 660.832 100 610 166.5 610C244 610 303 696.5 339 723.5C382.737 756.303 470.623 799.615 586 764.5C678 736.5 720.667 638.832 730 592.499C685.5 652.999 618 689.338 534.5 646.499C477 616.999 434 495.5 261 500.999Z" />
               </svg>
               Tailwind
-            </Link>
+            </a>
           }{' '}
           and{' '}
-          <Link
-            to="https://daisyui.com/"
+          <a
+            href="https://daisyui.com/"
+            rel="noreferrer"
             target="_blank"
             className="relative effect-underline"
           >
             <div className="inline pr-1 pb-1 w-5 h-5">
               <StaticImage
                 src="https://raw.githubusercontent.com/saadeghi/daisyui/master/src/docs/static/images/daisyui-logo/favicon-192.png"
+                alt="DaisyUI logo"
                 placeholder="blurred"
                 layout="constrained"
                 className="h-full"
@@ -71,8 +69,8 @@ const Footer = () => {
               />
             </div>
             DaisyUI
-          </Link>
-        </p>
+          </a>
+        </div>
         <span>
           by{' '}
           <Link

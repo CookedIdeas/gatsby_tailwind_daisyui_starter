@@ -2,17 +2,12 @@ import React from 'react';
 import { useSiteMetadata } from './useSiteMetadata';
 import ogImage from './og-image.png';
 
-const Seo = ({
-  children,
-  overwriteTitle,
-  overwriteDescrption,
-  pagePathname,
-}) => {
-  const { title, description, domain, lang } = useSiteMetadata();
+const Seo = ({ children, pageTitle, pageDescription, pagePathname }) => {
+  const { title: defaultTitle, description, domain, lang } = useSiteMetadata();
 
   const headContent = {
-    title: overwriteTitle || title,
-    description: overwriteDescrption || description,
+    title: pageTitle + ' | ' + defaultTitle || defaultTitle,
+    description: pageDescription || description,
     lang: lang,
     url: `${domain}${pagePathname || ``}`,
   };

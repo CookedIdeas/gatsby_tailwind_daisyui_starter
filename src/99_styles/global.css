@@ -23,3 +23,11 @@
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+
+/* LAYOUT */
+
+/* END OF LAYOUT */
+
+h1 {
+  @apply max-w-2xl text-4xl sm:text-6xl font-bold;
+}

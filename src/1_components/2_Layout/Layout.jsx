@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Seo from '../1_Seo_Head/Seo';
 
 const Layout = ({ children }) => {
   return (
@@ -14,3 +15,5 @@ const Layout = ({ children }) => {
   );
 };
 export default Layout;
+
+export const Head = () => <Seo />;

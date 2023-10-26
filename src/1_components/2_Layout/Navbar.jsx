@@ -1,18 +1,41 @@
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react';
-import { IconContext } from 'react-icons';
+import React, { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { navlinks } from './assets_navlinks';
+import { BsSunFill, BsFillMoonFill } from 'react-icons/bs';
+
+const themes = {
+  corporate: 'corporate',
+  dark: 'dark',
+};
+
+const getThemeFromLocalStorage = () => {
+  return localStorage.getItem('gatsbySite_theme') || themes.corporate;
+};
 
 const Navbar = () => {
+  const [theme, setTheme] = useState(getThemeFromLocalStorage());
+
+  const handleTheme = () => {
+    const { corporate, dark } = themes;
+    const newTheme = theme === dark ? corporate : dark;
+
+    setTheme(newTheme);
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('gatsbySite_theme', theme);
+  }, [theme]);
+
   return (
-    <header className="navbar bg-base-200">
+    <header className="navbar bg-base-200 px-2 sm:px-5 md:px-10">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost md:hidden">
+          <button tabIndex={0} className="btn btn-ghost md:hidden">
             <GiHamburgerMenu className="h-6 w-6" />
-          </label>
+          </button>
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
@@ -31,13 +54,23 @@ const Navbar = () => {
         </div>
 
         <Link to="/" className="btn btn-ghost">
-          <StaticImage
-            src="../../0_assets/logo.png"
-            alt="logo"
-            placeholder="blurred"
-            layout="constrained"
-            width={35}
-          />
+          {theme === 'dark' ? (
+            <StaticImage
+              src="../../0_assets/logo_dark.png"
+              alt="logo"
+              placeholder="blurred"
+              layout="constrained"
+              width={35}
+            />
+          ) : (
+            <StaticImage
+              src="../../0_assets/logo_light.png"
+              alt="logo"
+              placeholder="blurred"
+              layout="constrained"
+              width={35}
+            />
+          )}
         </Link>
       </div>
       <div className="navbar-center hidden md:flex">
@@ -55,7 +88,12 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        {/* THEME ICONS */}
+        <label className="swap swap-flip ">
+          <input type="checkbox" onChange={handleTheme} />
+          <BsSunFill className="swap-on h-4 w-4 " />
+          <BsFillMoonFill className="swap-off h-4 w-4" />
+        </label>
       </div>
     </header>
   );
