@@ -24,7 +24,7 @@ You can use default title and description or set custom page title and descripti
 
 Use site meta data with custom hook useSiteMetaData.
 
-og:image setting : When sharing mebsite link to social media, an image is added (used image is og-image.png in 1_Components/1_Seo_Head).
+Social media sharing : og:image is set with a custom illustration (used image is og-image.png in 1_Components/1_Seo_Head).
 
 <p align="center">
 <img src="git-assets/ogimage.png" alt="og-image" width="50%" height="auto">

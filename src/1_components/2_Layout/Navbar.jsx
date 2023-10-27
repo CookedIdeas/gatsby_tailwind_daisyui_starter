@@ -43,11 +43,15 @@ const Navbar = () => {
   return (
     <header className="navbar bg-base-300 px-2 sm:px-5 md:px-10">
       <div className="navbar-start">
-        <Link to="/" className="btn btn-ghost">
+        <Link to="/" className="btn btn-ghost" aria-label="back to home page">
           <LogoForNavbar />
         </Link>
         <div className="dropdown">
-          <button tabIndex={0} className="btn btn-ghost md:hidden">
+          <button
+            tabIndex={0}
+            className="btn btn-ghost md:hidden"
+            aria-label="toggle nav links menu"
+          >
             <GiHamburgerMenu className="h-6 w-6" />
           </button>
           <button
@@ -83,7 +87,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end pr-6">
         {/* THEME ICONS */}
-        <label className="swap swap-flip ">
+        <label className="swap swap-flip" aria-label="toggle theme">
           <input type="checkbox" onChange={handleTheme} />
           <BsSunFill className="swap-on h-4 w-4 " />
           <BsFillMoonFill className="swap-off h-4 w-4" />
