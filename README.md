@@ -8,8 +8,9 @@ A 4 pages site made with Gatsby, using Tailwind and Daisy UI for styling with ma
 - Footer with text and copyright
 - Dark/light theme using localStorage to store user's preference
 - Favicon adapting to user's browser theme
-  ![favicon-dark-mode](git-assets/favicon-dark.png)
-  ![favicon-light-mode](git-assets/favicon-light.png)
+
+  <img src="git-assets/favicon-light.png" alt="favicon-light-mode" width="25%" height="auto">
+  <img src="git-assets/favicon-dark.png" alt="favicon-dark-mode" width="25%" height="auto">
 
 ### SEO optimization
 
