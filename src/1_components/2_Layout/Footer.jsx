@@ -1,10 +1,9 @@
-import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="grid place-items-center bg-base-200 h-32 ">
+    <footer className="grid place-items-center bg-base-300 h-32 ">
       <div className="flex flex-col items-center gap-2">
         <div className="text-center">
           Made with{' '}
@@ -73,13 +72,14 @@ const Footer = () => {
         </div>
         <span>
           by{' '}
-          <Link
-            to="https://github.com/CookedIdeas"
+          <a
+            href="https://github.com/CookedIdeas"
+            rel="noreferrer"
             target="_blank"
             className="relative effect-underline"
           >
             Gabriel Gourcerol/Cooked Ideas
-          </Link>
+          </a>
         </span>
         <span>
           &#169; {new Date().getFullYear()} No copyright here actually ;)

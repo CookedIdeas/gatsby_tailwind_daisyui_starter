@@ -29,5 +29,9 @@
 /* END OF LAYOUT */
 
 h1 {
-  @apply max-w-2xl text-4xl sm:text-6xl font-bold;
+  @apply text-4xl sm:text-6xl font-bold;
+}
+
+.page-hero {
+  @apply mt-8 grid grid-rows-2 lg:grid-cols-2 lg:gap-x-6;
 }

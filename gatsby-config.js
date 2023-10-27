@@ -25,6 +25,14 @@ module.exports = {
       __key: 'images',
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: './src/pages/',
+      },
+      __key: 'pages',
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `WebSite logo`,
@@ -33,7 +41,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/0_assets/favicon/icon.png`,
+        icon: `src/0_assets/favicon/logo.svg`,
       },
     },
     `gatsby-plugin-offline`,
