@@ -6,6 +6,8 @@ A 4 pages site made with Gatsby, using Tailwind and Daisy UI for styling with ma
   <img src="git-assets/index-page.png" alt="index page screenshot" width="50%" height="auto">
 </p>
 
+Visit it here : https://gatsby-tailwind-daisyui-template.netlify.app/
+
 ## Features
 
 - Responsive header, with dropdown menu, link to home page with svg logo, theme switch
